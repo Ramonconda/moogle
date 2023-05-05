@@ -125,7 +125,7 @@ public class Corpus
         double wordindoc = CantdocWrd(searchword, corpus);
 
         // Calcula el logaritmo en base e de la cantidad de documentos entre la cantidad de documentos en los que aparece la palabra
-        double idf = Math.Log(wordindoc / amountofdoc);
+        double idf = Math.Log(amountofdoc/ wordindoc);
         return idf;
     }
 
