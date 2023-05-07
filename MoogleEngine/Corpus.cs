@@ -38,7 +38,7 @@ public class Corpus
         this.DocumentCorpus = new List<Document>();
         this.sizecorpus = DocumentCorpus.Count;
 
-        //Se le pasa el título, el texto y la posicion que ocupa en el corpus 
+        //Se le pasa el título, el texto y la posicion que ocupa en el corpus al constructor de la clase document 
         for (int i = 0; i < Paths.Length; i++)
         {
             DocumentCorpus.Add(new Document(GetTitle(Paths[i], DirectionLen), File.ReadAllText(Paths[i]), i));
@@ -177,7 +177,7 @@ public class Corpus
         Restore(biblioteca.TfIdfByDoc, biblioteca.OperWordsCant);
         //Si existe operadores de cercania se revisara y aumentara el valor de la relevancia
         OperatorsChecker3(biblioteca);
-        //Si existe operadores de cercania se revisara y se reevaluara la relevancia
+        //Si existe operadores de inclusion y exclusion se revisara y se reevaluara la relevancia
         OperatorsChecker2(biblioteca);
     }
     #endregion
@@ -191,7 +191,9 @@ public class Corpus
         int size = 20;
         //aqui guardaremos la mayor cantidad de palabras que han aparecido en un sector de 20
         int maxCount = 0;
+        //posicion a partir de la que iniciamos a tomar nuestras palabras
         int initialpos = 0;
+        // string que devolveremos
         string maxSection = "";
         //aqui llevamos la cuenta de el sector actual de 20 palabras 
         int count = 0;
@@ -206,6 +208,7 @@ public class Corpus
             {
                 count--;
             }
+            // si la palabra en la que estamos actualmente es de la query suma 1 al contador
             if (corpus.queryTimesforWord.ContainsKey(corpus.DocumentCorpus[index].Words[i]))
             {
                 count++;
@@ -360,7 +363,7 @@ public class Corpus
                 {//se va documento por documento y se aumenta el tf idf de esta palabra tantas veces como * haya
                     if (item.ContainsKey(cutword))
                     {
-                        item[cutword] = item[cutword] * counter;
+                        item[cutword] = item[cutword] * counter+1;
                     }
                 }
 
@@ -456,6 +459,7 @@ public class Corpus
                             {
                                 pal2 = p;
                             }
+                            // esta condicion se realiza porwue debo tener una aparicion de ambas palabras para empezar a medir la dist
                             if (pal2 != -1 && pal1 != -1)
                             {
                                 if (difmin > Math.Abs(pal1 - pal2))
@@ -468,7 +472,7 @@ public class Corpus
                         //Modifico mi relevancia con una funcion inversa que mientras mayor sea la distancia menor sera la bonificacion
 
                         double a = corpus.DocumentCorpus[j].Relevance;
-                        corpus.DocumentCorpus[j].Relevance = a + (1 * (1 / (double)difmin));
+                        corpus.DocumentCorpus[j].Relevance = a + (10 * (1 / (double)difmin));
 
 
 
