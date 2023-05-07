@@ -125,7 +125,7 @@ public class Corpus
         double wordindoc = CantdocWrd(searchword, corpus);
 
         // Calcula el logaritmo en base e de la cantidad de documentos entre la cantidad de documentos en los que aparece la palabra
-        double idf = Math.Log(amountofdoc/ wordindoc);
+        double idf = Math.Log(amountofdoc / wordindoc);
         return idf;
     }
 
@@ -348,22 +348,24 @@ public class Corpus
 
         foreach (string word in operwords.Keys)
         {
+            System.Console.WriteLine("ESTO");
             string cutword = (word.Substring(operwords[word], word.Length - operwords[word]));
 
             if (word.Contains('*'))
             {
                 //si la palabra tiene * el counter lleva la cuentade cuantos
-                int counter = 0;
+                double counter = 0;
                 for (int i = 0; i < operwords[word]; i++)
                 {
                     if (word[i] == '*')
                     { counter++; }
                 }
-                foreach (Dictionary<string, double> item in tfidf)
+                for (int i = 0; i < tfidf.Count - 1; i++)
                 {//se va documento por documento y se aumenta el tf idf de esta palabra tantas veces como * haya
-                    if (item.ContainsKey(cutword))
+                    if (tfidf[i].ContainsKey(cutword))
                     {
-                        item[cutword] = item[cutword] * counter+1;
+                        tfidf[i][cutword] = tfidf[i][cutword] * (counter + 1);
+                       
                     }
                 }
 
@@ -379,17 +381,18 @@ public class Corpus
 
             if (word.Contains('*'))
             {
-                int counter = 0;
+                double counter = 0;
                 for (int i = 0; i < operwords[word]; i++)
                 {
                     if (word[i] == '*')
                     { counter++; }
                 }
-                foreach (Dictionary<string, double> item in tfidf)
-                {
-                    if (item.ContainsKey(cutword))
+                for (int i = 0; i < tfidf.Count - 1; i++)
+                {//se va documento por documento y se disminuye el tf idf de esta palabra tantas veces como * haya
+                    if (tfidf[i].ContainsKey(cutword))
                     {
-                        item[cutword] = item[cutword] / counter;
+                        tfidf[i][cutword] = tfidf[i][cutword] / (counter + 1);
+
                     }
                 }
             }
