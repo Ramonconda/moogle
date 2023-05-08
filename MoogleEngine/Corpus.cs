@@ -365,7 +365,7 @@ public class Corpus
                     if (tfidf[i].ContainsKey(cutword))
                     {
                         tfidf[i][cutword] = tfidf[i][cutword] * (counter + 1);
-                       
+
                     }
                 }
 

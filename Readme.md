@@ -14,7 +14,7 @@ La aplicación está dividida en dos componentes fundamentales:
 - `MoogleServer` es un servidor web que renderiza la interfaz gráfica y sirve los resultados.
 - `MoogleEngine` es una biblioteca de clases donde está implementada la lógica del algoritmo de búsqueda.
 
-Para ejecutar el proyecto abrir una teminal y escribir el siguiente comando: dotnet watch run --project MoogleServer.
+Para ejecutar el proyecto abrir una teminal y escribir el siguiente comando: dotnet watch run --project MoogleServer(Windows) o el comando make dev (Linux).
 En caso de existir problemas al cargar los documentos modificar en la carpeta Moogle Server/ Clase Moogle / funcion CreateCorpus/ el valor direction que por defecto tiene : "../Content"
 
 
