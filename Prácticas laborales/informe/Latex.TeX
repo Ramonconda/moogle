@@ -56,10 +56,10 @@ palabra de la query buscando si existe en algún documento una palabra que la
 contenga y esté en más de 3 documentos , en caso de no existir se toma una parte de
 la palabra hasta que puedan devolverse alguna recomendación.
 
--Operadores \! y \^ : cada vez que se realice una búsqueda nuestro programa revisara la
+-Operadores ! y \^\ : cada vez que se realice una búsqueda nuestro programa revisara la
 existencia de ellos en nuestra query en caso de existir la palabra modificada no puede
 existir en nuestro documento o su relevancia se hará 0 para el operador ! y debe existir
-en nuestro documento o su relevancia se hará 0 para el operador \^ .
+en nuestro documento o su relevancia se hará 0 para el operador \^\ .
 
 -Operador * : cada búsqueda que se realice se comprobara si hay presencia de este
 operador , en caso positivo se cuenta la cantidad de ellos y se busca en cada
@@ -67,7 +67,7 @@ documento que existe esta palabra el Tf-Idf de la palabra para multiplicarlo por
 cantidad de operadores + 1 y cuando se termine el cálculo de la relevancia se
 devuelve nuestro TF – IDF a la normalidad.
 
--Operador ~: se revisa en cada documento en el que existan las 2 palabras entre las
+-Operador \~\ : se revisa en cada documento en el que existan las 2 palabras entre las
 que está nuestro operador . Se recorre cada palabra de nuestro texto y voy
 comparando la posición de aparición de cada palabra de la búsqueda con la última
 posición que tenia de la otra palabra pues la menor distancia entre una palabra y otra

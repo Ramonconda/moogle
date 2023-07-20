@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1689282256 "d:/Programcion/moogle practicas laborales/moogle/Prácticas laborales/Latex.t/Latex.tex" "Latex.pdf" "Latex" 1689282256 0
-  "C:/Users/ramon/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1689278373 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+["pdflatex"] 1689821088 "d:/Programcion/moogle practicas laborales/moogle/Prácticas laborales/informe/Latex.tex" "Latex.pdf" "Latex" 1689821088 0
+  "C:/Users/ramon/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1689818864 81088 29d6fa367ac022d1b69251d68c0742e6 ""
   "C:/Users/ramon/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1689274984 24118871 bfc501a7e838c52fb32a241dabd2f5c9 ""
   "C:/Users/ramon/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "C:/Users/ramon/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -40,9 +40,9 @@
   "C:/Users/ramon/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1665067579 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "C:/Users/ramon/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty" 1665067579 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "C:/Users/ramon/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1681896761 29940 9473d58112bc8a88f5505b823a053dde ""
-  "Latex.aux" 1689282256 416 94b5bf5b4a983bd7e8ddc4e80e091ec5 "pdflatex"
-  "Latex.tex" 1689281924 5445 452baf5dc324dc483911d93d2d5683f0 ""
-  "d:/Programcion/moogle practicas laborales/moogle/Prácticas laborales/Latex.t/Latex.tex" 1689281924 5445 452baf5dc324dc483911d93d2d5683f0 ""
+  "Latex.aux" 1689821088 416 94b5bf5b4a983bd7e8ddc4e80e091ec5 "pdflatex"
+  "Latex.tex" 1689821087 5449 6229570deb34d9d4954f1cdb2f37cd9a ""
+  "d:/Programcion/moogle practicas laborales/moogle/Prácticas laborales/informe/Latex.tex" 1689821087 5449 6229570deb34d9d4954f1cdb2f37cd9a ""
   "img/1.jpg" 1689277702 57531 a6e225a9ae28067faadeb333ee673cc8 ""
   "img/2.jpg" 1689277702 63585 a1765332d92d270127e8c1a8119076a1 ""
   "img/moogle.png" 1689207024 29115 dd9285d239ed02d1a49ea1870cda33d6 ""
